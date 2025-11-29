@@ -18,7 +18,7 @@ printf "\e[1;92m     PROOT-DISTRO-UBUNTU\n\n\e[0m"
 printf "${b}[${g}*${b}]${g} Installing distro ${r}\n"
 proot-distro install ubuntu 
 
-printf "${b}[${g}*${b}]${g} Ubuntu installed! Now run another command './GUI' ${r}\n"
+printf "${b}[${g}*${b}]${g} Ubuntu installed! Now run another command './gui.sh' ${r}\n"
 cat > $PREFIX/bin/server << 'EOF'
 #!/bin/bash
 echo "Starting server... started!"
