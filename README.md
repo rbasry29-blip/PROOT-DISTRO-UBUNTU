@@ -38,9 +38,21 @@ After that, run
 In any question,  only hit enter,  
 You should have 6 gb + storage,  the installation may take 2 hour. 
 Then,  restart your termux and run
+
+
+
 server
 Open another session,run
+
+
+
 ubuntu 
-then gui
+then 
+
+
+gui
+
+
+
 And go to termux-x11 app and
 Enjoy
