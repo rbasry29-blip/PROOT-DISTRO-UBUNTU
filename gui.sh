@@ -14,6 +14,7 @@ proot-distro login ubuntu -- b(){
 apt update -y 
 apt install xubuntu-desktop dbus-x11 -y
 printf "${b}[${g}*${b}]${g}Adding user " ubuntu ${r}\n"
+adduser ubuntu
 clear
 printf "\e[1;33m    _  _ ___  _  _ _  _ ___ _  _\n"
 printf "\e[1;96m    |  | |__] |  | |\\ |  |  |  |\n"
@@ -27,3 +28,5 @@ termux-x11 using command -
 2.ubuntu
 3.gui
 Enjoy! ${r}\n"
+b }
+a
