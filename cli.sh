@@ -5,6 +5,8 @@ r='\e[0m'
 y='\e[1;33m'
 c='\e[1;96m'
 software(){
+dpkg --configure -a 
+apt --fix-broken install
 clear
 printf "\e[1;33m    _  _ ___  _  _ _  _ ___ _  _\n"
 printf "\e[1;96m    |  | |__] |  | |\\ |  |  |  |\n"
