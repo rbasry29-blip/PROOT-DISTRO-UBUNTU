@@ -14,14 +14,13 @@ printf "\e[1;92m     PROOT-DISTRO-UBUNTU\n\n\e[0m"
 printf "${b}[${g}*${b}]${c} Updating and Installing packages.  This may take up to 2 hours,  please wait${r}\n"
 
 # Login to Ubuntu and run commands sequentially
-proot-distro login ubuntu -- a(){
-apt update -y 
-dpkg --configure -a 
-apt update -y 
-apt install xubuntu-desktop dbus-x11 -y 
-printf "${b}[${g}*${b}]${g} Adding user ubuntu ${r}\n" 
+proot-distro login ubuntu -- apt update -y &&
+dpkg --configure -a &&
+apt update -y &&
+apt install xubuntu-desktop dbus-x11 -y &&
+printf "${b}[${g}*${b}]${g} Adding user ubuntu ${r}\n" &&
 adduser ubuntu 
-} && a
+
 
 # Create gui launcher inside Ubuntu
 proot-distro login ubuntu -- bash -c "cat > /usr/bin/gui << 'EOF'
