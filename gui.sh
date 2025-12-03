@@ -169,8 +169,7 @@ proot-distro login ubuntu -- apt install irqbalance -y
 printf "${c}[${g}${c}Installing xserver-xorg-video-all${r}\n"
 proot-distro login ubuntu -- apt install xserver-xorg-video-all -y
 
-printf "${c}[${g}${c}Installing x${r}\n"
-proot-distro login ubuntu -- apt install x -y
+
 
 clear
 printf "\e[1;33m    _  _ ___  _  _ _  _ ___ _  _\n"
