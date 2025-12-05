@@ -29,8 +29,8 @@ first install two apps
 
 
 
-from github
-then,  run those commands in termux
+Now run commands in termux
+
 
 
 ```
