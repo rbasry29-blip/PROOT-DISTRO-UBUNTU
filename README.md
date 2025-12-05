@@ -1,6 +1,7 @@
 # PROOT-DISTRO-UBUNTU
 # Reviwe
-![Uploading 1000011249.png…]()
+<img width="1600" height="720" alt="1000011249" src="https://github.com/user-attachments/assets/ed2211d3-bab7-4fdb-8de0-fa8f4c0e383a" />
+
 
 # features 
 
