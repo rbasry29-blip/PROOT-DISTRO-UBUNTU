@@ -1,5 +1,21 @@
 # PROOT-DISTRO-UBUNTU
+
+
+# features 
+
 Run xubuntu-desktop in termux-x11
+
+
+Comes with much themes
+# Requirements 
+
+
+7 GB of storage
+
+
+Termux and 
+
+Termux-x11 
 first install two apps 
 
 
