@@ -1,11 +1,12 @@
 # PROOT-DISTRO-UBUNTU
 
-<img width="1600" height="720" alt="1000011249" src="https://github.com/user-attachments/assets/ed2211d3-bab7-4fdb-8de0-fa8f4c0e383a" />
+<img width="1600" height="720" alt="1000011275" src="https://github.com/user-attachments/assets/f640620b-5af1-4850-8508-11d4d2e2e304" />
+
 
 
 # features 
 
-Run xubuntu-desktop in termux-x11
+Run ubuntu in termux-x11
 
 
 Comes with much themes
