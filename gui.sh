@@ -36,8 +36,7 @@ proot-distro login ubuntu -- apt install fwupd -y
 printf "${c}[${g}*${c}]${g} Installing fwupdate${r}\n"
 proot-distro login ubuntu -- apt install fwupdate -y
 
-printf "${c}[${g}*${c}]${g} Installing fwupdate-signed${r}\n"
-proot-distro login ubuntu -- apt install fwupdate-signed -y
+
 
 printf "${c}[${g}*${c}]${g} Installing udisks2${r}\n"
 proot-distro login ubuntu -- apt install udisks2 -y
