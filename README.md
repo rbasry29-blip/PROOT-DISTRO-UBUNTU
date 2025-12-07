@@ -1,6 +1,7 @@
 # PROOT-DISTRO-UBUNTU
 
-<img width="1600" height="720" alt="1000011275" src="https://github.com/user-attachments/assets/f640620b-5af1-4850-8508-11d4d2e2e304" />
+<img width="1600" height="720" alt="1000011367" src="https://github.com/user-attachments/assets/fe3892ae-e286-46d1-88e3-22795acdf09f" />
+
 
 
 
