@@ -142,3 +142,4 @@ Then run
 ```
 ./gui.sh
 ```
+# Termux-x11 setup 
