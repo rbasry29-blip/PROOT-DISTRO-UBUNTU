@@ -177,7 +177,7 @@ proot-distro login ubuntu -- adduser ubuntu
 
 printf "${b}[${g}*${b}]${g} Creating launchers  ${r}\n"
 
-proot-distro login ubuntu -- apt update -y
+
 
 
 # Create gui launcher inside Ubuntu
@@ -188,6 +188,8 @@ dbus-launch
 xfce4-session &
 EOF
 chmod +x /usr/bin/gui"
+
+printf "${b}[${g}*${b}]${g} Adding finishing touches   ${r}\n"
 
 clear
 printf "\e[1;33m    _  _ ___  _  _ _  _ ___ _  _\n"
