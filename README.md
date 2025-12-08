@@ -179,6 +179,8 @@ select "toggle additional key bar " ↓
 
 
 click on "Volume down" 
+
+
 ![1000011392](https://github.com/user-attachments/assets/31337b01-3c98-4b2d-95b6-f24132453791)
 
 
@@ -188,3 +190,7 @@ select "toggle soft Keyboard " ↓
 ![1000011393](https://github.com/user-attachments/assets/0b092744-6dcf-4e7c-b969-d50deee8fff4)
 
 
+go back.  click on "Output" ↓
+
+
+![1000011394](https://github.com/user-attachments/assets/1a59dcd3-fe37-4391-ac1f-795e5c29c8c6)
