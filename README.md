@@ -34,7 +34,9 @@ first install two apps
 
 
 3.Gboard from [Google play ](https://play.google.com/store/apps/details?id=com.google.android.inputmethod.latin)
-Now run commands in termux
+
+
+Now run commands in termux↓
 
 
 
@@ -143,14 +145,23 @@ Then run
 ./gui.sh
 ```
 # Termux-x11 setup 
- First , hold Termix-x11 app ↓
+ First , hold Termix-x11 app click on PREFERENCES ↓
 
  
  ![1000011387](https://github.com/user-attachments/assets/a87319be-5e8c-4b61-b5d7-0e4cda79d2ed)
 
- click on PREFERENCES ↓
+ 
+click on other 
 
 
  ![1000011388](https://github.com/user-attachments/assets/822ada0a-41e0-42ec-aa32-5cfcff0befdb)
+
+
+
+click on Configure response to user actions ↓
+
+
+![1000011390](https://github.com/user-attachments/assets/5213ed5b-41b1-43bb-a21f-ed2aa0ecad88)
+
 
 
