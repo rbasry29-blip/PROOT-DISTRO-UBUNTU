@@ -203,3 +203,21 @@ enable "Fullscreen"↓
 ![1000011395](https://github.com/user-attachments/assets/30519f6d-2d95-40b7-b8d6-d9f8f99329c2)
 
 
+All done! 
+Now set Gboard as default keyboard. Run in termux -
+
+```
+server
+```
+
+Open another session and run 
+
+```
+ubuntu
+```
+then run 
+```
+gui
+```
+inside ubuntu. 
+Go to Termux-x11 app, press volume up for additional key bar.  Press volume down for key board 
