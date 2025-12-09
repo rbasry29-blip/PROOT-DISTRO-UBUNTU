@@ -166,6 +166,176 @@ printf "${c}[${g}*${c}]${g} Installing xubuntu-desktop${r}\n"
 proot-distro login ubuntu -- apt install xubuntu-desktop -y
 
 
+
+# installer-safe.sh
+# Asks all choices first, then updates & installs selected packages inside proot-distro ubuntu.
+# Uses your banner and printf style. Checks repo availability before installing.
+
+# Colors (keep these variables to control colours)
+b="\e[1;34m"   # Blue
+g="\e[1;92m"   # Light green
+c="\e[1;96m"   # Light cyan
+r="\e[0m"      # Reset
+
+# --------------------------
+# Ask ALL choices first
+# --------------------------
+
+# Browser
+clear
+printf "\e[1;33m    _  _ ___  _  _ _  _ ___ _  _\n"
+printf "\e[1;96m    |  | |__] |  | |\\ |  |  |  |\n"
+printf "\e[1;92m    |__| |__] |__| | \\|  |  |__|\n"
+printf "\e[1;92m     PROOT-DISTRO-UBUNTU\n\n\e[0m"
+printf "${b}[${g}*${b}]${c} Select Browser${r}\n"
+printf " ${b}[${g}1${b}]${c} Firefox ESR${r}\n"
+printf " ${b}[${g}2${b}]${c} Falkon${r}\n"
+printf " ${b}[${g}3${b}]${c} Both (Firefox ESR + Falkon)${r}\n"
+printf " ${b}[${g}4${b}]${c} Skip${r}\n"
+printf "Enter option: "
+read BROWSER_CHOICE
+
+# Text Editor (only nano)
+clear
+printf "\e[1;33m    _  _ ___  _  _ _  _ ___ _  _\n"
+printf "\e[1;96m    |  | |__] |  | |\\ |  |  |  |\n"
+printf "\e[1;92m    |__| |__] |__| | \\|  |  |__|\n"
+printf "\e[1;92m     PROOT-DISTRO-UBUNTU\n\n\e[0m"
+printf "${b}[${g}*${b}]${c} Do you want to install Text Editor (nano)?${r}\n"
+printf " ${b}[${g}1${b}]${c} Yes${r}\n"
+printf " ${b}[${g}2${b}]${c} No${r}\n"
+printf "Enter option: "
+read EDITOR_CHOICE
+
+# MPV Player
+clear
+printf "\e[1;33m    _  _ ___  _  _ _  _ ___ _  _\n"
+printf "\e[1;96m    |  | |__] |  | |\\ |  |  |  |\n"
+printf "\e[1;92m    |__| |__] |__| | \\|  |  |__|\n"
+printf "\e[1;92m     PROOT-DISTRO-UBUNTU\n\n\e[0m"
+printf "${b}[${g}*${b}]${c}Do you want to install MPV Player ?${r}\n"
+printf " ${b}[${g}1${b}]${c} Yes${r}\n"
+printf " ${b}[${g}2${b}]${c} No${r}\n"
+printf "Enter option: "
+read MPV_CHOICE
+
+# Graphic Tool
+clear
+printf "\e[1;33m    _  _ ___  _  _ _  _ ___ _  _\n"
+printf "\e[1;96m    |  | |__] |  | |\\ |  |  |  |\n"
+printf "\e[1;92m    |__| |__] |__| | \\|  |  |__|\n"
+printf "\e[1;92m     PROOT-DISTRO-UBUNTU\n\n\e[0m"
+printf "${b}[${g}*${b}]${c} Select Graphic Tool${r}\n"
+printf " ${b}[${g}1${b}]${c} GIMP${r}\n"
+printf " ${b}[${g}2${b}]${c} Inkscape${r}\n"
+printf " ${b}[${g}3${b}]${c} Both${r}\n"
+printf " ${b}[${g}4${b}]${c} Skip${r}\n"
+printf "Enter option: "
+read GFX_CHOICE
+
+# Display Manager
+clear
+printf "\e[1;33m    _  _ ___  _  _ _  _ ___ _  _\n"
+printf "\e[1;96m    |  | |__] |  | |\\ |  |  |  |\n"
+printf "\e[1;92m    |__| |__] |__| | \\|  |  |__|\n"
+printf "\e[1;92m     PROOT-DISTRO-UBUNTU\n\n\e[0m"
+printf "${b}[${g}*${b}]${c} Select Display Manager${r}\n"
+printf " ${b}[${g}1${b}]${c} lightdm${r}\n"
+printf " ${b}[${g}2${b}]${c} xdm${r}\n"
+printf " ${b}[${g}3${b}]${c} Skip${r}\n"
+printf "Enter option: "
+read DM_CHOICE
+
+# --------------------------
+# After choices: print banner + installing message
+# --------------------------
+clear
+# exact banner (you requested this exact banner)
+printf "\e[1;33m    _  _ ___  _  _ _  _ ___ _  _\n"
+printf "\e[1;96m    |  | |__] |  | |\\ |  |  |  |\n"
+printf "\e[1;92m    |__| |__] |__| | \\|  |  |__|\n"
+printf "\e[1;92m     PROOT-DISTRO-UBUNTU\n\n\e[0m"
+
+printf "${b}[${g}*${b}]${c} Installing selected packages ${r}\n"
+
+# --------------------------
+# Update inside proot once (so apt-cache checks will be current)
+# --------------------------
+printf "${b}[${g}*${b}]${c} Updating package lists inside Ubuntu... ${r}\n"
+proot-distro login ubuntu -- apt update -y >/dev/null 2>&1
+
+# --------------------------
+# Prepare list of packages to try installing (based on user choices)
+# --------------------------
+PKGS_TO_INSTALL=()
+
+# Browser selection mapping
+case "$BROWSER_CHOICE" in
+    1) PKGS_TO_INSTALL+=("firefox-esr") ;;
+    2) PKGS_TO_INSTALL+=("falkon") ;;
+    3) PKGS_TO_INSTALL+=("firefox-esr" "falkon") ;;
+    *) ;;
+esac
+
+# Text editor mapping
+case "$EDITOR_CHOICE" in
+    1) PKGS_TO_INSTALL+=("nano") ;;
+    *) ;;  # No installation if 2 (No) is selected
+esac
+
+# MPV
+case "$MPV_CHOICE" in
+    1) PKGS_TO_INSTALL+=("mpv") ;;
+    *) ;;
+esac
+
+# Graphic tools
+case "$GFX_CHOICE" in
+    1) PKGS_TO_INSTALL+=("gimp") ;;
+    2) PKGS_TO_INSTALL+=("inkscape") ;;
+    3) PKGS_TO_INSTALL+=("gimp" "inkscape") ;;
+    *) ;;
+esac
+
+# Display manager
+case "$DM_CHOICE" in
+    1) PKGS_TO_INSTALL+=("lightdm") ;;
+    2) PKGS_TO_INSTALL+=("xdm") ;;
+    *) ;;
+esac
+
+# remove duplicates while preserving order
+UNIQ_PKGS=()
+for p in "${PKGS_TO_INSTALL[@]}"; do
+    skip=0
+    for q in "${UNIQ_PKGS[@]}"; do
+        if [ "$p" = "$q" ]; then skip=1; break; fi
+    done
+    if [ $skip -eq 0 ]; then UNIQ_PKGS+=("$p"); fi
+done
+
+# --------------------------
+# For each package: check availability then install
+# --------------------------
+for pkg in "${UNIQ_PKGS[@]}"; do
+    proot-distro login ubuntu -- bash -lc "apt-cache show ${pkg} >/dev/null 2>&1"
+    if [ $? -eq 0 ]; then
+        printf "${b}[${g}*${b}]${c} Installing: ${pkg} ${r}\n"
+        proot-distro login ubuntu -- apt install -y "${pkg}"
+        if [ $? -eq 0 ]; then
+            printf "${b}[${g}*${b}]${c} ${pkg} installed successfully${r}\n"
+        else
+            printf "${b}[${g}*${b}]${c} Failed to install ${pkg} (see apt output)${r}\n"
+        fi
+    else
+        printf "${b}[${g}*${b}]${c} ${pkg} not found in Ubuntu repos — skipping${r}\n"
+    fi
+done
+
+# Done message
+printf "${b}[${g}*${b}]${c} Installation process finished${r}\n"
+
+
   
 clear
 printf "\e[1;33m    _  _ ___  _  _ _  _ ___ _  _\n"
