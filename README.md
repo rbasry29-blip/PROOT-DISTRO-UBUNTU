@@ -116,7 +116,7 @@ gui
 If you want a full copy-paste command , use this -
 ```
 pkg update || true
-pkg upgrade || true
+yes | pkg upgrade
 pkg install git -y
 git clone https://github.com/rbasry29-blip/PROOT-DISTRO-UBUNTU
 cd PROOT-DISTRO-UBUNTU
