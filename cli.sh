@@ -35,7 +35,7 @@ proot-distro login ubuntu -- adduser ubuntu
 
 printf "${b}[${g}*${b}]${g} Ubuntu installed! ${r}\n"
 printf "${b}[${g}*${b}]${g} Run ${y} ubuntu ${g} to get Ubuntu cli ${r}\n"
-printf "${b}[${g}*${b}]${g}If you want GUI , Then run ${r}\n"
+printf "${b}[${g}*${b}]${g} If you want GUI , Then run ${r}\n"
 
 printf "${b}[${g}*${b}]${y} ./gui.sh ${r}\n"
 
