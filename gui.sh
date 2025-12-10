@@ -366,9 +366,9 @@ printf "\e[1;92m     PROOT-DISTRO-UBUNTU\n\n\e[0m"
 printf "${b}[${g}*${b}]${c} Finishing ${g}.....
 Everything is good!
 You can launch Ubuntu via termux-x11 using commands:
-1. ${y}server${c}
+${b}[${g}*${b}]${c}${y}server${c}
 Then open another session and run -
-2. ${y}ubuntu${c}
-3. ${y}gui${c}
-Enjoy! ${r}\n"
+${b}[${g}*${b}]${c}${y}ubuntu${c}
+${b}[${g}*${b}]${c}${y}gui${c}
+${b}[${g}*${b}]${c}Enjoy! ${r}\n"
 
