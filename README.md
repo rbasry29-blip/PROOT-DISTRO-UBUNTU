@@ -9,19 +9,23 @@ PROOT-DISTRO-UBUNTU | Termux Ubuntu | Modded Ubuntu | Ubuntu in Termux | Termux-
 
 # features 
 
-Run ubuntu in termux-x11
+- Run ubuntu in termux-x11
 
+- Comes with much themes
 
-Comes with much themes
+- 2 Browsers (Firefox and falkon )
+
 # Requirements 
 
 
-7 GB of storage
+ - 7 GB of storage
 
 
-Termux and 
+ - Termux and 
 
-Termux-x11 app
+ - Termux-x11 app
+
+
 # Installation 
 first install two apps 
 
