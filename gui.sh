@@ -167,18 +167,16 @@ proot-distro login ubuntu -- apt install xubuntu-desktop -y
 
 
 
-# installer-safe.sh
-# Asks all choices first, then updates & installs selected packages inside proot-distro ubuntu.
-# Uses your banner and printf style. Checks repo availability before installing.
+ 
 
-# Colors (keep these variables to control colours)
+# Colors 
 b="\e[1;34m"   # Blue
 g="\e[1;92m"   # Light green
 c="\e[1;96m"   # Light cyan
 r="\e[0m"      # Reset
 
 # --------------------------
-# Ask ALL choices first
+#  
 # --------------------------
 
 # Browser
