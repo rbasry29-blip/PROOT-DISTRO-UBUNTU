@@ -69,7 +69,7 @@ printf '\e[1;92m    |__| |__] |__| | \\|  |  |__|\n'
 printf '\e[1;92m     PROOT-DISTRO-UBUNTU\n\n\e[0m'
 
 yes | termux-setup-storage
-spinner "${b}[${g}*${b}]${c} Installing packages${g}....." "apt update -y && apt install proot-distro -y && apt install x11-repo  -y && apt install termux-x11-nightly && apt install x11-repo -y "
+spinner "${b}[${g}*${b}]${c} Installing packages${g}....." "yes | apt update  && yes | apt install proot-distro && yes | apt install x11-repo  && yes | apt install termux-x11-nightly && yes | apt install x11-repo "
 sleep 1
 clear
 printf '\e[1;33m    _  _ ___  _  _ _  _ ___ _  _\n'
