@@ -1,4 +1,4 @@
-# proot-distro-ubuntu 
+# gui-ubuntu-os 
 
 PROOT-DISTRO-UBUNTU | Termux Ubuntu | Modded Ubuntu | Ubuntu in Termux | Termux-X11 Ubuntu
 
