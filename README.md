@@ -53,7 +53,7 @@ pkg update || true
 pkg install git -y
 ```
 ```
-git clone https://github.com/rbasry29-blip/proot-distro-ubuntu
+git clone https://github.com/rbasry29-blip/gui-ubuntu-os
 ```
 
 
