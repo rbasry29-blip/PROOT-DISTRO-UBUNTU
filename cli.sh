@@ -58,7 +58,7 @@ check_internet() {
 
     if [ $? -ne 0 ]; then
         echo "Sorry, internet connection is needed."
-        exited
+        exit 1
     fi
 }
 
