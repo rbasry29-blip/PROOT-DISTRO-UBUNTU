@@ -64,7 +64,7 @@ Then,  run
 
 
 ```
-cd proot-distro-ubuntu
+cd gui-ubuntu-os
 ```
 
 
@@ -119,7 +119,7 @@ pkg update || true
 yes | pkg upgrade
 pkg install git -y
 git clone https://github.com/rbasry29-blip/proot-distro-ubuntu
-cd proot-distro-ubuntu
+cd gui-ubuntu-os
 chmod +x *
 ./cli.sh
 ./gui.sh
