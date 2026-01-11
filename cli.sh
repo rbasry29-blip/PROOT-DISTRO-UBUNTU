@@ -48,7 +48,7 @@ check_internet() {
     TARGET_URL="https://github.com/rbasry29-blip/gui-ubuntu-os"
 
     if command -v curl >/dev/null 2>&1; then
-        curl -Is --connect-timeout 2 "$TARGET_URL" >/dev/null 2>&1
+        curl -Is --connect-timeout 5 "$TARGET_URL" >/dev/null 2>&1
     elif command -v wget >/dev/null 2>&1; then
         wget -q --spider --timeout=5 "$TARGET_URL"
     else
@@ -58,7 +58,7 @@ check_internet() {
 
     if [ $? -ne 0 ]; then
         echo "Sorry, internet connection is needed."
-        exit 1
+        exited
     fi
 }
 
